@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: yanbaru_code_clone_app_37_development
+
+test:
+  <<: *default
+  database: yanbaru_code_clone_app_37_test
+
+production:
+  <<: *default
+  database: yanbaru_code_clone_app_production
+  username: yanbaru_code_clone_app
+  password: <%= ENV['YANBARU_CODE_CLONE_APP_DATABASE_PASSWORD'] %>

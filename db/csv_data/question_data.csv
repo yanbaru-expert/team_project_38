@@ -1,0 +1,111 @@
+title,detail
+railsのscaffoldで作ったアプリケーションの確認画面に遷移するときにエラー,"railsのscaffoldで作ったアプリケーションの雛形に確認画面を実装しようとしているのですが、そこでエラーにハマってます。
+
+確認画面は出せたのですが、そこから投稿するタイミングでエラーが発生します。
+
+```
+ActionController::ParameterMissing in BooksController#create
+param is missing or the value is empty: book
+```
+
+confirm.html.erb
+
+```
+<%= form_for @book , method: :post do |f| %>
+  <%= @book.title %>
+  <%= @book.text %>
+  <div class=""actions"">
+    <%= f.submit '投稿画面に戻る', name: 'back' %>
+  </div>
+  <div class=""actions"">
+    <%= f.submit '投稿する' %>
+  </div>
+<% end %>
+```
+
+どなたか分かれば教えてください。"
+rails new でアプリを作った後、bundle exec rake db:createを実行してもエラーが出てしまいデータベースが作れません,"`rails new` でアプリを作った後、`bundle exec rake db:create`を実行してもエラーが出てしまいデータベースが作れません。
+初歩的な事で申し訳ないんですが検索しても今いち解決法がわからないです^^;
+エラー文はこちらです。
+
+```
+shiomifndonoMBP:crud_sample shiomiferunando$ bundle exec rake db:create
+rake aborted!
+LoadError: Error loading the ‘sqlite3’ Active Record adapter. Missing a gem it depends on? can’t activate sqlite3 (~> 1.3.6), already activated sqlite3-1.4.0. Make sure all dependencies are added to Gemfile.
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/activerecord-5.2.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:12:in `<main>'
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require’
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi’
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register’
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi’
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require’
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require’
+/Users/shiomiferunando/workspace/crud_sample/vendor/bundle/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency’
+```"
+画像更新時に Undefined Method Scale In CarrierWave というエラーが出る,":avatar属性を更新しようとしたらerrorが出てしまいましたね。
+ちなみにcarrierwaveでアップロードした画像です。
+
+ちなみにerrorの情報はこちらです。
+
+```
+undefined method `scale' for #<AvatarUploader:0x00007fafe1bce510>
+```"
+Dockerアプリをクローンからのデプロイってどうやればいいんでしょうか？,"今Dockerでアプリ作ったんですけど、herokuにデプロイができなくて困ってます。。
+
+`git push heroku master`　すると下記のようにエラーになります。
+
+```
+Counting objects: 359, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (335/335), done.
+Writing objects: 100% (359/359), 66.10 KiB | 3.67 MiB/s, done.
+Total 359 (delta 143), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.5.3
+remote: -----> Installing dependencies using bundler 1.15.2
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.16.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        You are trying to install in deployment mode after changing
+remote:        your Gemfile. Run `bundle install` elsewhere and add the
+remote:        updated Gemfile.lock to version control.
+remote:
+remote:        You have deleted from the Gemfile:
+remote:        * mini_racer
+remote:        Bundler Output: Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.16.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        You are trying to install in deployment mode after changing
+remote:        your Gemfile. Run `bundle install` elsewhere and add the
+remote:        updated Gemfile.lock to version control.
+remote:
+remote:        You have deleted from the Gemfile:
+remote:        * mini_racer
+remote:
+remote:  !
+remote:  !     Failed to install gems via Bundler.
+remote:  !
+remote:  !     Push rejected, failed to compile Ruby app.
+remote:
+remote:  !     Push failed
+remote: Verifying deploy...
+remote:
+remote: !       Push rejected to still-garden-98905.
+remote:
+To https://git.heroku.com/still-garden-98905.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/still-garden-98905.git'
+```"
+`rails new hello_sample -d mysql`  でアプリが立ち上げられない,"Lv.24 Ruby on Rails で Hello World!! のところで1つ質問があります。
+
+`rails new hello_sample -d mysql` をターミナルで入力した後に、以下のようなエラー文が表示されました。
+
+```
+Fetching mysql2 0.5.2
+Installing mysql2 0.5.2 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+```
+
+その後に上記の `An error occurred...` のエラー文が表示され、一旦 `bundle install` をしてみたのですが、同じエラーが出ています。
+
+Lv.23の環境構築では、mysqlのインストールは完了済みです。"
