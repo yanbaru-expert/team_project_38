@@ -4,12 +4,20 @@
     <title>GyakutenCloneGroup</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
-  </body>
-</html>
+    <header>
+    </header>
+    <main>
+      <#% max_width メソッドは application_helper.rb に記載 %>
+        <div class="base-container <%= max_width %>">
+          <%= yield %>
+        </div>
+      </main>
+      <footer>
+      </footer>
+    </body>
+  </html>
