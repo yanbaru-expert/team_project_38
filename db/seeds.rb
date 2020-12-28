@@ -7,7 +7,6 @@ User.find_or_create_by!(email: EMAIL) do |user|
   puts "ユーザーの初期データインポートに成功しました。"
 end
 class ImportCsv
-  Movie.destroy_all
   def self.import(path)
     list = []
     CSV.foreach(path, headers: true) do |row|
@@ -23,3 +22,5 @@ class ImportCsv
     puts "インポート完了!!"
   end
 end
+Movie.destroy_all
+ImportCsv.user_data
