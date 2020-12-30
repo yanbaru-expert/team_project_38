@@ -14,4 +14,3 @@ class ImportCsv
     puts "インポート完了!!"
   end
 end
- 
