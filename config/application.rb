@@ -30,6 +30,8 @@ module YanbaruCodeCloneApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     # Don't generate system test files.
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Asia/Tokyo'
     config.generators.system_tests = nil
   end
 end
