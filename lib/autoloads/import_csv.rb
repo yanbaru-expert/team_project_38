@@ -6,11 +6,20 @@ class ImportCsv
     end
     list
   end
+
+  def self.movie_data
+    list = import('db/csv_data/movie_data.csv')
+    puts "movieデータのインポート処理を開始"
+    Movie.create!(list)
+    puts "インポート完了!!"
+  end
+
   def self.text_data
     list = import('db/csv_data/text_data.csv')
-
-    puts "インポート処理を開始"
+    puts "textデータのインポート処理を開始"
     Text.create!(list)
     puts "インポート完了!!"
   end
-end
+
+
+  end
