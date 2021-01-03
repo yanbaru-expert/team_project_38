@@ -11,8 +11,6 @@ User.find_or_create_by!(email: EMAIL) do |user|
   user.password = PASSWORD
   puts "ユーザーの初期データインポートに成功しました。"
 end
-Movie.destroy_all
-ImportCsv.user_data
 
 # 初期 管理者ユーザーデータを作成
 AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |adminuser|
@@ -20,3 +18,8 @@ AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |adminuser|
   adminuser.password_confirmation = ADMIN_PASSWORD
   puts "管理者ユーザーの初期データインポートに成功しました。"
 end
+
+Movie.destroy_all
+ImportCsv.movie_data
+Text.destroy_all
+ImportCsv.text_data
