@@ -1,7 +1,7 @@
 class TextsController < ApplicationController
 
   def index
-    @texts = Text.order(id: :asc)
+    @texts = Text.where(genre: ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]).order(id: :asc)
   end
 
   def show
