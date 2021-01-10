@@ -4,7 +4,5 @@ class TextsController < ApplicationController
     @texts = Text.where(genre: ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]).order(id: :asc)
   end
 
-  
-  
 
 end
