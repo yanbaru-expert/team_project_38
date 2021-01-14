@@ -49,3 +49,15 @@ div.content-card {
 .alert-alert {
   @extend .alert-danger;
 }
+
+/* 動画一覧ページ */
+
+.movie-body {
+  height: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-title {
+  margin-top: 1rem;
+}
