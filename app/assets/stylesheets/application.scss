@@ -26,6 +26,10 @@
   max-width: 1200px;
 }
 
+.mw-sm{
+  max-width: var(--breakpoint-sm);
+}
+
 div.text-card-container {
   padding-left: 9px;
   padding-right: 9px;
@@ -50,4 +54,6 @@ h1{
 .base-container{
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
