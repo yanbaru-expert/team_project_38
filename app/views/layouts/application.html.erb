@@ -18,8 +18,6 @@
       <% end %>
     </header>
     <main>
-      <%# <#% max_width メソッドは application_helper.rb に記載 %> %>
-      <div class="container-sm">100% wide until small breakpoint</div>
         <div class="base-container <%= max_width %>">
           <%= yield %>
         </div>
