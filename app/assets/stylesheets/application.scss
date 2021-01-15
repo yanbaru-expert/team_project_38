@@ -10,6 +10,10 @@
 .base-container {
   margin: 7%;
   padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* max-width */
@@ -41,9 +45,3 @@ h1{
   padding: 20px 0px 10px 0px;
 }
 
-.base-container{
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
