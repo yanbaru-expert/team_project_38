@@ -5,7 +5,8 @@ module ApplicationHelper
       "mw-sm"
     elsif controller.action_name == "index"
       "mw-xl"
+    else
+      "mw-md"
     end
-
   end
 end
