@@ -1,0 +1,26 @@
+<div class="base-container mw-xl">
+  <div class="container-fluid">
+    <div class="row">
+      <% @movies.each.with_index(1) do |movie, i| %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%# <div class="card-border-dark mb-3"> %>
+          <div class="card border-dark mb-3">
+            <div class="card-header p-0">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="<%= movie.url %>"></iframe>
+              </div>
+            </div>
+            <div class="card-body text-dark movie-body">
+              <!-- ここに「視聴済み機能」を実装(以下を編集) -->
+              <button class="btn btn-secondary btn-block">視聴済みにする</button>
+              <p class="card-text movie-title">
+                Lv.<%= i %> ：
+                <%= movie.title %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

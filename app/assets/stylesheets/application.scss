@@ -8,23 +8,22 @@
 /* 全体 */
 
 .base-container {
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 7%;
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* max-width */
 
-.mw-md {
-  max-width: 720px;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .mw-#{$breakpoint} {
+    max-width: var(--breakpoint-#{$breakpoint});
+  }
 }
 
-.mw-lg {
-  max-width: 960px;
-}
-
-.mw-xl {
-  max-width: 1200px;
-}
 div.text-card-container {
   padding-left: 9px;
   padding-right: 9px;
@@ -40,6 +39,11 @@ div.content-card {
 .text-title{
   margin-top: 30px;
 }
+h1{
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px 0px 10px 0px;
+}
 
 /* フラッシュ */
 .alert-notice {
@@ -48,4 +52,17 @@ div.content-card {
 
 .alert-alert {
   @extend .alert-danger;
+}
+
+
+/* 動画一覧ページ */
+
+.movie-body {
+  height: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-title {
+  margin-top: 1rem;
 }
