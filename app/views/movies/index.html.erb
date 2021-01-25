@@ -12,7 +12,13 @@
             </div>
             <div class="card-body text-dark movie-body">
               <!-- ここに「視聴済み機能」を実装(以下を編集) -->
-              <button class="btn btn-secondary btn-block">視聴済みにする</button>
+              <p>
+                <% if movie.watched_by?(current_user) %>
+                  <a class="btn btn-secondary btn-block">視聴済みにする</a>
+                <% else %>
+                  <a class="btn btn-primary btn-block">視聴済みを解除</a>
+                <% end %>
+              </p>
               <p class="card-text movie-title">
                 Lv.<%= i %> ：
                 <%= movie.title %>
