@@ -12,7 +12,7 @@
             </div>
             <div class="card-body text-dark movie-body">
               <!-- ここに「視聴済み機能」を実装(以下を編集) -->
-              <p>
+              <p id="watched-movie-<%= movie.id %>">
                 <% if @watched_movie_ids.include?(movie.id) %>
                   <div class="btn btn-secondary btn-block"><%= render "watched_movie", movie: movie %></div>
                 <% else %>
