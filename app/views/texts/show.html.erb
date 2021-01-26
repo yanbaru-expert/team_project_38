@@ -1,7 +1,7 @@
 <%= markdown(@text.content) %>
 
 <% if @text.read_by?(current_user) %>
-  <%= link_to "★", text_reads_path(@text), method: :delete %>
+  <%= render "read", post: @text %>
 <% else %>
-  <%= link_to "☆", text_reads_path(@text), method: :post %>
+  <%= render "disread", post: @text %>
 <% end %>
