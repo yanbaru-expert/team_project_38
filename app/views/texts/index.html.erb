@@ -9,9 +9,11 @@
               <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" class="img-fluid" >
             </div>
             <div class="card-body">
-              <div id="button-plan">
-                <p>ボタン予定地（ボタン実装時にここを編集してください）</p>
-              </div>
+              <% if text.read_by?(current_user)%>
+                <p>読破</p>
+              <% else %>
+                <p>未読</p>
+              <% end %>
               <p class="card-text txet-title">
                 <%= text.title %>
               </p>
