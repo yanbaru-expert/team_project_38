@@ -11,9 +11,9 @@
             <div class="card-body">
               <div>
                 <% if text.read_by?(current_user) %>
-                  <%= link_to "★", text_reads_path(text), method: :delete %>
+                  <%= link_to "読破済み解除", text_reads_path(text), method: :delete, class: "btn btn-primary btn-block" %>
                 <% else %>
-                  <%= link_to "☆", text_reads_path(text), method: :post %>
+                  <%= link_to "読破済みにする", text_reads_path(text), method: :post, class: "btn btn-secondary btn-block" %>
                 <% end %>
               </div>
               <p class="card-text txet-title">
