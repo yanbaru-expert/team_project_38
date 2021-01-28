@@ -5,7 +5,7 @@
         <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" class="img-fluid" >
       </div>
       <div class="card-body">
-        <div>
+        <div id="text-<%= text.id %>">
           <% if @read_text_ids.include?(text.id) %>
             <%= render "read", text: text %>
           <% else %>
