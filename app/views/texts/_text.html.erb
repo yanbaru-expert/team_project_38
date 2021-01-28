@@ -7,9 +7,9 @@
       <div class="card-body">
         <div>
           <% if @read_text_ids.include?(text.id) %>
-            <%= link_to "読破済み解除", text_reads_path(text), method: :delete, class: "btn btn-primary btn-block" %>
+            <%= render "read", text: text %>
           <% else %>
-            <%= link_to "読破済みにする", text_reads_path(text), method: :post, class: "btn btn-secondary btn-block" %>
+            <%= render "disread", text: text %>
           <% end %>
         </div>
         <p class="card-text txet-title">
