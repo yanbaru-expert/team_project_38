@@ -1,7 +1,7 @@
 <%= markdown(@text.content) %>
 
 <% if @text.read_by?(current_user) %>
-  <%= render "read", post: @text %>
+  <%= render "read" %>
 <% else %>
-  <%= render "disread", post: @text %>
+  <%= render "disread" %>
 <% end %>
