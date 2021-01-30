@@ -10,15 +10,11 @@
       </div>
       <div class="modal-body">
         <p>『<%= text.title %>』を読破しました。</p>
-        
-        <% if text.next.present? %>
-        <%= link_to "次の教材にすすむ", text_path(text.next) %>
-        <% end %>
       </div>
-      
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <% if text.next.present? %>
+        <%= link_to "次の教材にすすむ", text_path(text.next), class: "btn btn-primary btn-block" %>
+        <% end %>
       </div>
     </div>
   </div>
