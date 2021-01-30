@@ -1,5 +1,5 @@
-<%= link_to "読破済みにする", text_reads_path(text), method: :post, class: "btn btn-secondary btn-block", remote: true, data: {toggle: "modal", target: "#exampleModalCenter"} %>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<%= link_to "読破済みにする", text_reads_path(text), method: :post, class: "btn btn-secondary btn-block", remote: true, data: {toggle: "modal", target: "#ModalCenter"} %>
+<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -16,6 +16,7 @@
         <%= link_to "次の教材にすすむ", text_path(text.next), class: "btn btn-primary btn-block" %>
         <% end %>
       </div>
+    </div>
     </div>
   </div>
 </div>
