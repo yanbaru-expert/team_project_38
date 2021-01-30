@@ -8,4 +8,7 @@ class Text < ApplicationRecord
   def read_by?(user)
     reads.find_by(user_id: user.id).present?
   end
+  def next
+    Text.where("id > ?", self.id).order("id ASC").first
+  end
 end
