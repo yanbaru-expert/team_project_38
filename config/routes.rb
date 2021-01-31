@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :texts, only: [:index, :show] do
     resource :reads, only: [:create, :destroy]
   end
-  resources :movies, only: [:index, :show]
+  resources :movies, only: [:index, :show] do
+    resource :watched_movies, only: [:create, :destroy]
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
