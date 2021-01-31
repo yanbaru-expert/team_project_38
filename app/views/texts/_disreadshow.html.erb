@@ -1,0 +1,23 @@
+<%= link_to "読破済みにする", text_reads_path(text), method: :post, class: "btn btn-secondary btn-block", remote: true, data: {toggle: "modal", target: "#ModalCenter"} %>
+<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">読破おつかれさまです！</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>『<%= text.title %>』を読破しました。</p>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fab fa-twitter"></i><span>ツイートする</span></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div class="modal-footer">
+        <% if text.next.present? %>
+        <%= link_to "次の教材にすすむ", text_path(text.next), class: "btn btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
