@@ -1,3 +1,12 @@
+<%# 検索機能 %>
+
+<%= search_form_for @q do |f| %>
+<%= f.text_field :title_cont ,placeholder: '教材を探す' %>
+<%= f.submit "検索"%>
+</form>
+
+<% end %>
+
 <h1>テキスト教材</h1>
 
   <div class="row">
