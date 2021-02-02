@@ -9,7 +9,6 @@ class Text < ApplicationRecord
     reads.find_by(user_id: user.id).present?
   end
   def next
-    texts = Text.where(genre: ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]).order(id: :asc)
-    texts.where("id > ?", self.id).order("id ASC").first
+    texts.where(genre: ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]).where("id > ?", self.id).order("id ASC").first
   end
 end
