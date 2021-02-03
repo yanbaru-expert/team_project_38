@@ -79,18 +79,6 @@ ActiveRecord::Schema.define(version: 2021_01_25_070029) do
     t.index ["user_id"], name: "index_watched_movies_on_user_id"
   end
 
-  create_table "watcheds", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "movie_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["movie_id"], name: "index_watcheds_on_movie_id"
-    t.index ["user_id", "movie_id"], name: "index_watcheds_on_user_id_and_movie_id", unique: true
-    t.index ["user_id"], name: "index_watcheds_on_user_id"
-  end
-
   add_foreign_key "watched_movies", "movies"
   add_foreign_key "watched_movies", "users"
-  add_foreign_key "watcheds", "movies"
-  add_foreign_key "watcheds", "users"
 end
