@@ -7,8 +7,7 @@ class TextsController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
-    @next_text = Text.genre.where("id > ?", @text.id).oldest.first
+    @next_text = Text.genre.next(@text.id)
   end
-
 
 end
