@@ -1,7 +1,7 @@
 class TextsController < ApplicationController
 
   def index
-    @texts = Text.where(genre: $genre).order(id: :asc)
+    @texts = Text.genre.oldest
     @read_text_ids = current_user.reads.pluck(:text_id)
   end
 
