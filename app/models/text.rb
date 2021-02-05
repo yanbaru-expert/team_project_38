@@ -11,10 +11,9 @@ class Text < ApplicationRecord
   
   scope :oldest, -> { order(id: :asc)}
   scope :genre, -> { where(genre: ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]) }
-  scope :next, -> (current_text_id){ genre.where("id > ?", current_text_id).oldest.first}
   
-  # def next
-  #   Text.genre.where("id > ?", id).oldest.first
-  # end
+  def next
+    Text.genre.where("id > ?", id).oldest.first
+  end
   
 end

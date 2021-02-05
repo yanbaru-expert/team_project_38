@@ -7,7 +7,6 @@ class TextsController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
-    @next_text = Text.next(@text.id)
   end
 
 
