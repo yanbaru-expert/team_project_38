@@ -15,8 +15,8 @@
         </a>
       </div>
       <div class="modal-footer">
-        <% if text.next.present?%>
-        <%= link_to "次の教材にすすむ", text_path(text.next), class: "btn btn-primary btn-block" %>
+        <% if next_text.present? %>
+        <%= link_to "次の教材へ進む", text_path(next_text), class: "btn btn-primary btn-block" %>
         <% else %>
         <p>最後の教材です。お疲れ様でした</p>
         <% end %>
