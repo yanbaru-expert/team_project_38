@@ -10,13 +10,13 @@
         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Rails
         </a>
-        <div class="dropdown-menu" xaria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="http://localhost:3000/texts">教材</a>
-          <a class="dropdown-item" href="#">動画教材</a>
-          <a class="dropdown-item" href="#">AWS講座</a>
-          <a class="dropdown-item" href="#">プログラミング勉強会</a>
-          <a class="dropdown-item" href="#">質問集</a>
-          <a class="dropdown-item" href="#">チャレンジ問題集</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to "Ruby/Railsテキスト教材", root_path, class: "dropdown-item" %>
+          <%= link_to "Ruby/Rails動画教材", movies_path , class: "dropdown-item" %>
+          <%= link_to "AWSテキスト教材", "#", class: "dropdown-item" %>
+          <%= link_to "よくある質問", "#", class: "dropdown-item" %>
+          <%= link_to "チャレンジ問題集", "#", class: "dropdown-item" %>
+
         </div>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,7 +42,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">進捗管理</a>
-          <a class="dropdown-item" href="#">アカウント編集</a>
+          <%= link_to 'アカウント編集', edit_user_registration_path, class: "dropdown-item" %>
         </div>
 
         <% if user_signed_in? %>
