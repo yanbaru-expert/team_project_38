@@ -27,6 +27,19 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
    max-width: var(--breakpoint-#{$breakpoint});}
  }
 
+ .mw-md {
+  max-width: 720px;
+}
+
+.mw-lg {
+  max-width: 960px;
+}
+
+.mw-xl {
+  max-width: 1200px;
+}
+
+
 div.text-card-container {
  padding-left: 9px;
  padding-right: 9px;
@@ -56,24 +69,16 @@ h1{
  @extend .alert-danger;
 }
 /* navbar */
-.navbar-expand-lg {
-margin: 0 auto;
-}
 
-.collapse {
+.navbar {
+  background-color: #5D9Dff;
+  
 
-width: 100px;
-max-width: 1200px;
+
 }
 
 body {
    padding-top: 56px;
-
- }
- .navbar {
-   background-color: #6699FF;
-
-
 
  }
 
