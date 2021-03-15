@@ -10,36 +10,47 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 /* 全体 */
 
 .base-container {
-  margin: 7%;
-  padding: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+ margin: 7%;
+ padding: 30px;
+ margin-right: auto;
+ margin-left: auto;
+ padding-left: 15px;
+ padding-right: 15px;
 }
 
 /* max-width */
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  .mw-#{$breakpoint} {
-    max-width: var(--breakpoint-#{$breakpoint});
-  }
+ .mw-#{$breakpoint} {
+   max-width: var(--breakpoint-#{$breakpoint});}
+ }
+
+ .mw-md {
+  max-width: 720px;
+}
+
+.mw-lg {
+  max-width: 960px;
+}
+
+.mw-xl {
+  max-width: 1200px;
 }
 
 div.text-card-container {
-  padding-left: 9px;
-  padding-right: 9px;
-  margin-bottom: 50px;
+ padding-left: 9px;
+ padding-right: 9px;
+ margin-bottom: 50px;
 }
 
 div.content-card {
-  height: 370px;
-  max-width: 376px;
-  margin: 0 auto;
+ height: 370px;
+ max-width: 376px;
+ margin: 0 auto;
 }
 
 .text-title{
-  margin-top: 30px;
+ margin-top: 50px;
 }
 h1{
   text-align: center;
@@ -49,14 +60,21 @@ h1{
 
 /* フラッシュ */
 .alert-notice {
-  @extend .alert-success;
+ @extend .alert-success;
 }
-
 .alert-alert {
-  @extend .alert-danger;
+ @extend .alert-danger;
+}
+/* navbar */
+
+.navbar {
+  background-color: #5D9Dff;
 }
 
+body {
+   padding-top: 56px;
 
+ }
 /* 動画一覧ページ */
 
 .movie-body {
