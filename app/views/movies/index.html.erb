@@ -22,11 +22,12 @@
               <p class="card-text movie-title">
                 Lv.<%= i %> ：
                 <%= movie.title %>
+
               </p>
             </div>
           </div>
         </div>
       <% end %>
+      <%= paginate @movies %>
     </div>
   </div>
-</div>
