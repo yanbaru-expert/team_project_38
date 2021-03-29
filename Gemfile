@@ -38,4 +38,3 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # ページネーション機能
 gem 'kaminari'
-gem 'kaminari-bootstrap'
